@@ -71,7 +71,7 @@ export const bubbleSortWithCallback = (array: number[], callback?: (arr: number[
         }
     }
 
-    if (wasArrayResorted) return bubbleSortWithCallback(newArray);
+    if (wasArrayResorted) return bubbleSortWithCallback(newArray, callback);
     return newArray // [1, 4, 5, 7, 2]
 }
 
