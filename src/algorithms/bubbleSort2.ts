@@ -5,7 +5,7 @@
 //check if the array still needs sorting
 // check if the array is sorted, if not, keep sorting 
 
-const bubbleSort = (array): number[] => {
+const bubbleSort = (array: number[]): number[] => {
     const inputArray = [...array];
     let didNumbersSwap = false;
 
