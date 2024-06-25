@@ -9,7 +9,7 @@ const selectionSort = (array: number[]) => {
 
     //loop through array as many times as there are elements
     for (let iterationCount = 0; iterationCount < newArray.length - 1; iterationCount++) {
-        // when we loop through the array, we want to have an offset equal to i
+        // when we loop through the array, we want to have an offset equal to iterationCount
         const offset = iterationCount;
         let positionOfLowestValue = offset; // position of the lowest value
 
