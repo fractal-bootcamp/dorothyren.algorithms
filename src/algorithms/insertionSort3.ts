@@ -1,8 +1,8 @@
 
-function insertSort3(array: number[], sortedArray?: number[]): number[] {
+function insertSort3(array: number[], sortedArray?: number[], callback?: (arr: number[]) => any): number[] {
     if (!sortedArray) sortedArray = []
+    if (array.length == 0) return sortedArray
     const newArray = structuredClone(array)
-    if (newArray.length == 0) return sortedArray
     const elementToBeSorted = newArray[0]
 
     for (let index = 0; index < sortedArray.length; index++) {
@@ -12,7 +12,8 @@ function insertSort3(array: number[], sortedArray?: number[]): number[] {
         }
     }
     sortedArray?.push(elementToBeSorted)
-    return insertSort3(newArray.slice(1), sortedArray)
+    if (callback) callback(sortedArray)
+    return insertSort3(newArray.slice(1), sortedArray, callback)
 }
 
 console.log(insertSort3([5, 7, 8, 10, 2, 6]))

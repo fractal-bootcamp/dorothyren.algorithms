@@ -11,9 +11,11 @@ function insertionSort2(array: number[], lockedinarray?: number[], callback?: (a
     }
     // if it isn't less than any elements, it must be greater than all elements
     lockedinarray.splice(index, 0, valueToBeSorted)
-    if (callback) callback(lockedinarray)
+    if (callback) callback([...lockedinarray])
     return insertionSort2(newArray.slice(1), lockedinarray, callback)
 
 }
+
+export default insertionSort2
 
 console.log(insertionSort2([5, 8, 10, 2, 8, 17]))
