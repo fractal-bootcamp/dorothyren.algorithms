@@ -5,7 +5,7 @@ function mergeSort(array: number[]): number[] {
     const leftArray = array.slice(0, middleIndex);
     const rightArray = array.slice(middleIndex, array.length)
 
-    //sort the two halves and handled the case where there is only one element so it is already sorted
+    //sort the two halves and handle the case where there is only one element so it is already sorted
     const sortedLeft = leftArray.length > 1 ? mergeSort(leftArray) : leftArray
     const sortedRight = rightArray.length > 1 ? mergeSort(rightArray) : rightArray
 
@@ -24,7 +24,6 @@ function mergeSort(array: number[]): number[] {
             const theRestOfRight = sortedRight.slice(rightIndex)
             sortedLeft.push(...theRestOfRight)
             rightIndex = sortedRight.length
-            break;
         }
     }
 
